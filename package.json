@@ -9,9 +9,11 @@
     "test": "ng test",
     "lint": "ng lint --force",
     "e2e": "ng e2e",
-    "cypress:run": "npx cypress run"
+    "cypress:run": "npx cypress run",
+    "cy:open_dev":"npx cypress open --env username=cytest@test, password=welcome23",
+    "cy:open_test":"npx cypress open --env username=cytest2@test, password=welcome22",
+    "cy:open_process":"npx cypress open --env email=$DB_USERNAME, password=$PASSWORD"
     
-
   },
   "engines": {
     "node": "^14.20.0 || ^16.13.0 || ^18.10.0"

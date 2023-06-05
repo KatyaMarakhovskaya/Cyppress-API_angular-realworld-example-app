@@ -108,7 +108,7 @@ describe('Test with backend', () => {
             }
 
             cy.request({
-                url: 'https://api.realworld.io/api/articles/',
+                url: Cypress.env("apiUrl")+'/api/articles/',
                 headers: {'Authorization': 'Token '+ token},
                 method: 'POST',
                 body: bodyRequest
@@ -122,7 +122,7 @@ describe('Test with backend', () => {
 
             
                 cy.request({
-                    url:'https://api.realworld.io/api/articles?limit=10&offset=0',
+                    url:Cypress.env("apiUrl")+'/api/articles?limit=10&offset=0',
                     headers:{'Authorization': 'Token '+ token},
                     method:'GET'
                 }).its('body').then(body => {
