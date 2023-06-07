@@ -9,6 +9,9 @@ module.exports = defineConfig({
     password: "Krist230294",
     apiUrl:"https://api.realworld.io"
   },
+
+  retries:1,
+
   //запускать потом - під час запуску DB_USERNAME='нейм' PASSWORD='пароль' npm run cy:open_process
   e2e: {
 
